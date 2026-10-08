@@ -184,18 +184,20 @@ print("\nEMPLEADOS VALIDOS:")
 for empleado in validos:
     print(empleado)
 
-# Mostramos los empleados rechazados y sus errores.
+# Mostramos los empleados rechazados.
 
 print("\nEMPLEADOS RECHAZADOS:")
 for rechazado in rechazados:
-    print(rechazado["empleado"]["nombre"], ":", rechazado["errores"]) 
+    print(rechazado["empleado"]["nombre"], ":", rechazado["errores"])
 
-# Mostramos las cantidades finales.
+# Mostramos los totales finales
 
-print("\nRESUMEN:")
-print("Total procesados:", len(empleados))
-print("Total validos:", len(validos))
-print("Total rechazados:", len(rechazados))
+def mostrar_totales(empleados, validos, rechazados):
+ print("\nRESUMEN:")
+ print("Total procesados:", len(empleados))
+ print("Total validos:", len(validos))
+ print("Total rechazados:", len(rechazados))
+mostrar_totales(empleados, validos, rechazados) 
 
 # Contamos cuantas veces aparece cada motivo de rechazo.
 
